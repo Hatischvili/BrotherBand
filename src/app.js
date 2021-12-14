@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-require("dotenv-safe").config();
+require("dotenv").config();
 
 
 const db = require("./database/mongoConfig");
