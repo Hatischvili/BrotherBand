@@ -6,6 +6,10 @@ const auth = require("../controller/authController");
 const user = require("../controller/userController");
 const brother = require("../controller/brotherController")
 
+router.get("/", user.welcome);
+
+
+
 //////////////////////////////
 /////////////AUTH/////////////
 //////////////////////////////
@@ -38,8 +42,6 @@ router.use(middleware);
 /////////////////////////////
 
 /////////////////////////////////GET//////////////////////////////////////////
-
-router.get("/", user.welcome);
 
 router.get("/me", user.getMyInfo);
 
