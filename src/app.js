@@ -5,11 +5,14 @@ require("dotenv-safe").config();
 
 
 const db = require("./database/mongoConfig");
+db.connect();
+
 const routes = require("./routes/allRoutes");
 
 app.use(cors());
+
 app.use(express.json());
-db.connect();
+
 
 
 

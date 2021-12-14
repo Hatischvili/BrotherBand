@@ -1,6 +1,5 @@
 const User = require("../models/UserSchema");
 const moment = require("moment");
-const mongoose = require("mongoose");
 
 
 ///////////////////////////////
