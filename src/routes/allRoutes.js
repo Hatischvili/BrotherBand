@@ -39,6 +39,7 @@ router.use(middleware);
 
 /////////////////////////////////GET//////////////////////////////////////////
 
+router.get("/", user.welcome);
 
 router.get("/me", user.getMyInfo);
 

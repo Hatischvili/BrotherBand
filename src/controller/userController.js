@@ -6,6 +6,19 @@ const moment = require("moment");
 //////////////GET//////////////
 ///////////////////////////////
 
+
+////WELCOME////
+
+const welcome = async (req, res) => {
+  try {
+    const user = req
+    res.status(200).json("Welcome to the BrotherBand protocol");
+    
+  } catch (error) {
+    
+  }
+}
+
 ///GET USER'S OWN INFO///
 
 const getMyInfo = async (req, res) => {
@@ -243,4 +256,5 @@ module.exports = {
   deleteCutBrotherband,
   postAcceptBB,
   deleteRecievedBBRequests,
+  welcome
 };
