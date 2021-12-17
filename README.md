@@ -76,7 +76,7 @@ Um status, no qual pode ser mudado a qualquer momento
 
 ## Arquitetura MVC
 
- 📁 cestas-solidarias
+ 📁 brotherband
    |
    |-  📁 src
    |    |
