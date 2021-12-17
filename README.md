@@ -37,7 +37,7 @@ Hoje em dia, o principal intuito fora deturpado. Deturpado ao ponto que redes so
 
 A BrotherBand é uma API de rede social propositalmente simples. 
 
-Ao você não possuir feed e só poder adicionar pessoas próximas, você cria um ambiente saudável e mantém seus laços mais importantes. 
+Ao você não possuir feed e só poder adicionar até 5 pessoas próximas, você cria um ambiente saudável e mantém seus laços mais importantes. 
 
 Por ser um ambiente feito para limitar ao máximo facilitadores de atrito, ansiedade e ódio, a API cria um espaço seguro para seus usuários.
 
@@ -45,19 +45,19 @@ Apenas as pessoas que você confia e ama.
 
 # Implementação
 
-- Ao se cadastrar, o usuário fornece os seguintes dados:
-Seu nome
-Uma senha
-Sua data de nascimento
-Um segredo seu 
-Um status, no qual pode ser mudado a qualquer momento
-5 coisas favoritas na sua vida
+#### Ao se cadastrar, o usuário fornece os seguintes dados: 
+- Seu nome
+- Uma senha
+- Sua data de nascimento
+- Um segredo seu 
+- Um status, no qual pode ser mudado a qualquer momento
+- 5 coisas favoritas na sua vida
 
-- Após fazer o cadastro, o usuário recebe sua ID cadastrada no banco de dados.
+#### Após fazer o cadastro, o usuário recebe sua ID cadastrada no banco de dados.
 
-- Você pode visualizar o perfil de outro usuário apenas com a id do mesmo.
+#### Você pode visualizar o perfil de outro usuário apenas com a id do mesmo.
 
-- Todo e qualquer detalhe pessoal além de nome e data de registro no sistema será ocultado para aqueles que não tenham uma conexão mútua. Também não é possível mandar mensagens para estranhos.
+#### Todo e qualquer detalhe pessoal além de nome e data de registro no sistema será ocultado para aqueles que não tenham uma conexão mútua. Também não é possível mandar mensagens para estranhos.
 
 ## Para criar uma conexão mútua (a "BrotherBand") e se tornar amigos (ou "Brothers"), é necessário:
 
@@ -172,6 +172,10 @@ OBS: Por conta da API atualmente só ser backend, utilize um cliente de api como
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
 | GET          | `https://brotherband.herokuapp.com/me/status`    |      Retorna o status do usuário fazendo a request               |  
+
+| Método HTTP  | Endpoint                                | Descrição                            |
+| ------------ | -------------------------------------| ------------------------------------ |
+| GET          | `https://brotherband.herokuapp.com/me/brothers`    |      Retorna os amigos do usuário fazendo a request               |
 
 
 | Método HTTP  | Endpoint                                | Descrição                            |
