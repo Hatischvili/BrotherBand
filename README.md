@@ -76,6 +76,7 @@ Um status, no qual pode ser mudado a qualquer momento
 
 ## Arquitetura MVC
 
+```
  📁 brotherband
    |
    |-  📁 src
@@ -110,7 +111,7 @@ Um status, no qual pode ser mudado a qualquer momento
    |- 📑 package-lock.json
    |- 📑 package.json
    |- 📑 server.js
-
+```
 
 ## Rotas
 
