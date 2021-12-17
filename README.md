@@ -22,8 +22,6 @@ A BrotherBand é uma API RESTFull de rede social simples desenvolvida em Node.js
 - [Autora](#autora)
 - [Agradecimentos](#agradecimentos)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'></a></i></small>
-
 
 # Problema
 
@@ -316,7 +314,7 @@ Prover em formato JSON:
 
 Este projeto ainda está na sua infância, mas entre as melhorias planejadas estão:
 
-## Médio prazo
+### Médio prazo
 
 - Implementação de código frontend baseado em Next.js 
 - Melhoria do sistema de mensagens para serem instâneas e em tempo real
@@ -324,18 +322,18 @@ Este projeto ainda está na sua infância, mas entre as melhorias planejadas est
 - Adição de álbum de fotos pessoais
 - Grupos de pessoas que possuem os exatos mesmos amigos
 
-## Médio-longo prazo
+### Médio-longo prazo
 
 - Refazer o código backend por completo utilizando Rust
 - Fazer um aplicativo para celular
 
-## Longo prazo
+### Longo prazo
 
 - Completa transição do código para se tornar um dAPP (aplicação decentralizada bseada em blockchain)
 - Adicionar coleções de NFTs 
 - Tornar a plataforma um validador de identidade para outros dAPPs
 
-## Em consideração:
+### Em consideração:
 
 - Adição de mais informações pessoais
 
