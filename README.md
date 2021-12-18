@@ -88,7 +88,6 @@ Apenas as pessoas que você confia e ama.
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [Moment.js](https://momentjs.com/)
 - [nodemon](https://nodemon.io/)
-- [apiDoc](https://apidocjs.com/)
 
 
 # Arquitetura MVC
@@ -120,7 +119,7 @@ Apenas as pessoas que você confia e ama.
    |         |- 📑 allRoutes.js 
    |
    |    |- 📑 app.js
-   |    |- 📑 apidoc.json
+   | 
    |
    |
    |- 📑 .env
