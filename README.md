@@ -197,15 +197,15 @@ OBS: Por conta da API atualmente só ser backend, utilize um cliente de api como
 
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
-| GET          | `https://brotherband.herokuapp.com/me/messages/brothers/requests/recieved`    |      Retorna os pedidos de amizade recebidos pelo usuário fazendo a request               | 
+| GET          | `https://brotherband.herokuapp.com/me/brothers/requests/recieved`    |      Retorna os pedidos de amizade recebidos pelo usuário fazendo a request |  | 
 
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
-| GET          | `https://brotherband.herokuapp.com/me/messages/brothers/requests/sent`    |      Retorna os pedidos de amizade enviados pelo usuário fazendo a request               | 
+| GET          | `https://brotherband.herokuapp.com/me/brothers/requests/recieved `   |      Retorna os pedidos de amizade enviados pelo usuário fazendo a request               | 
 
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
-| GET          | `https://brotherband.herokuapp.com/me/messages/brothers/requests/recieved`    |      Retorna os pedidos de amizade recebidos pelo usuário fazendo a request               | 
+| GET          | `https://brotherband.herokuapp.com/me/messages/brothers/requests/sent`    |      Retorna os pedidos de amizade recebidos pelo usuário fazendo a request               | 
 
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
@@ -213,7 +213,7 @@ OBS: Por conta da API atualmente só ser backend, utilize um cliente de api como
 
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
-| POST        | `https://brotherband.herokuapp.com/me/messages/brothers/requests/deny`    |      Nega o pedido de amizade de outro usuário. Colocar a id do usuário pedindo no body.       | 
+| DELETE      | `https://brotherband.herokuapp.com/me/messages/brothers/requests/deny`    |      Nega o pedido de amizade de outro usuário. Colocar a id do usuário pedindo no body.       | 
 
 | Método HTTP  | Endpoint                                | Descrição                            |
 | ------------ | -------------------------------------| ------------------------------------ |
