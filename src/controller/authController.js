@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 
 ////////////////////////////////////REGISTER/////////////////////////////////////
 
-postSignUp = async (req, res) => {
+const postSignUp = async (req, res) => {
   const { username, password, birthdate, secret, status, favorites } = req.body;
 
   const passHashed = await hashPass(password, res);
@@ -62,7 +62,7 @@ const postLogin = async (req, res) => {
   }
 };
 
-  (module.exports = {
-    postLogin,
-    postSignUp,
-  });
+module.exports = {
+  postSignUp,
+  postLogin,
+};

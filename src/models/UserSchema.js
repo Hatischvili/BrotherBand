@@ -85,13 +85,13 @@ const UserSchema = new mongoose.Schema({
 });
 
 function favoritesLimiter(fav) {
-    return fav.length === 5}
+  return fav.length === 5;
+}
 
-    function brotherLimiter(bro) {
-  return bro.length <= 5
+function brotherLimiter(bro) {
+  return bro.length <= 5;
 }
 
 const User = mongoose.model("User", UserSchema);
 
-
-module.exports = User
+module.exports = User;

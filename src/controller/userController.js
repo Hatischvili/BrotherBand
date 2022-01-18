@@ -1,23 +1,18 @@
 const User = require("../models/UserSchema");
 const moment = require("moment");
 
-
 ///////////////////////////////
 //////////////GET//////////////
 ///////////////////////////////
-
 
 ////WELCOME////
 
 const welcome = async (req, res) => {
   try {
-    const user = req
+    const user = req;
     res.status(200).json("Welcome to the BrotherBand protocol");
-    
-  } catch (error) {
-    
-  }
-}
+  } catch (error) {}
+};
 
 ///GET USER'S OWN INFO///
 
@@ -27,7 +22,9 @@ const getMyInfo = async (req, res) => {
     const userInfo = {
       Name: user.username,
       Born: moment(user.birthdate).format("DD/MM/YYYY"),
-      Age: moment.duration(moment().diff(moment(user.birthdate)))._data["years"],
+      Age: moment.duration(moment().diff(moment(user.birthdate)))._data[
+        "years"
+      ],
       Secret: user.secret,
       Status: user.status,
       Favorites: user.favorites,
@@ -55,7 +52,7 @@ const getMyId = async (req, res) => {
 
 const getMyStatus = async (req, res) => {
   try {
-     const user = await User.findById(req.userId);
+    const user = await User.findById(req.userId);
     res.status(200).json(user.status);
   } catch (ERR) {
     res.status(500).json({ Message: ERR.message });
@@ -66,7 +63,7 @@ const getMyStatus = async (req, res) => {
 
 const getMyFavorites = async (req, res) => {
   try {
-     const user = await User.findById(req.userId);
+    const user = await User.findById(req.userId);
     res.status(200).json(user.favorites);
   } catch (ERR) {
     res.status(500).json({ Message: ERR.message });
@@ -77,10 +74,10 @@ const getMyFavorites = async (req, res) => {
 
 const getMyBrothers = async (req, res) => {
   try {
-     const user = await User.findById(req.userId);
-     const userBro = await User.findById(user.brothers);
-     const userBroId = userBro.id;
-     const userBroNames = userBro.username;
+    const user = await User.findById(req.userId);
+    const userBro = await User.findById(user.brothers);
+    const userBroId = userBro.id;
+    const userBroNames = userBro.username;
     res.status(200).json([{ Name: userBroNames, Id: userBroId }]);
   } catch (ERR) {
     res.status(500).json({ Message: ERR.message });
@@ -91,7 +88,7 @@ const getMyBrothers = async (req, res) => {
 
 const getMyInbox = async (req, res) => {
   try {
-     const user = await User.findById(req.userId);
+    const user = await User.findById(req.userId);
     res.status(200).json(user.inbox);
   } catch (ERR) {
     res.status(500).json({ Message: ERR.message });
@@ -113,7 +110,7 @@ const getMyOutbox = async (req, res) => {
 
 const getMyRecievedBBRequests = async (req, res) => {
   try {
-     const user = await User.findById(req.userId);
+    const user = await User.findById(req.userId);
     res.status(200).json(user.receivedBBRequests);
   } catch (ERR) {
     res.status(500).json({ Message: ERR.message });
@@ -148,7 +145,7 @@ const patchMyUpdateStatus = async (req, res) => {
       if (error) {
         res.status(500);
       } else {
-        res.status(201).json({ "Status updated": update });
+        res.status(202).json({ "Status updated": update });
       }
     });
   } catch (ERR) {
@@ -164,19 +161,20 @@ const patchMyUpdateStatus = async (req, res) => {
 
 const deleteCutBrotherband = async (req, res) => {
   const exBro = await User.findById(req.params.id);
-  const exBroId = exBro.id 
-  const user = await User.findById(req.userId)
-  const userId = user.id
+  const exBroId = exBro.id;
+  const user = await User.findById(req.userId);
+  const userId = user.id;
 
   try {
-    
-    user.brothers.pull(exBroId)
+    user.brothers.pull(exBroId);
     await user.save();
 
-    exBro.brothers.pull(userId)
-    await exBro.save()
-    
-    res.status(200).json({"You've sucessfully cut your brotherband with": exBro.username})
+    exBro.brothers.pull(userId);
+    await exBro.save();
+
+    res
+      .status(200)
+      .json({ "You've sucessfully cut your brotherband with": exBro.username });
   } catch (ERR) {
     res.status(500).json({ Message: ERR.message });
   }
@@ -201,20 +199,16 @@ const deleteRecievedBBRequests = async (req, res) => {
   }
 };
 
-
 ///////////////////////////////
 /////////////POST//////////////
 ///////////////////////////////
-
-
 
 const postAcceptBB = async (req, res) => {
   const user = await User.findById(req.userId);
   const newBrother = await User.findById(req.params.id);
   const userId = user.id;
-  const brotherId = newBrother.id
+  const brotherId = newBrother.id;
   const secret = `${user.username}'secret is: ${user.secret}`.toString();
-
 
   if (user.receivedBBRequests.includes(brotherId)) {
     try {
@@ -233,14 +227,14 @@ const postAcceptBB = async (req, res) => {
       newBrother.inbox.addToSet(secret);
       await newBrother.save();
 
-      res.status(201).json(`${newBrother.username}'secret is "${newBrother.secret}"`);
+      res
+        .status(201)
+        .json(`${newBrother.username}'secret is "${newBrother.secret}"`);
     } catch (ERR) {
       res.status(500).json({ Message: ERR.message });
     }
-
-  } 
-}
-
+  }
+};
 
 module.exports = {
   getMyInfo,
@@ -256,5 +250,5 @@ module.exports = {
   deleteCutBrotherband,
   postAcceptBB,
   deleteRecievedBBRequests,
-  welcome
+  welcome,
 };
