@@ -319,11 +319,12 @@ Este projeto ainda está na sua infância, mas entre as melhorias planejadas est
 
 ### Médio prazo
 
-- Implementação de código frontend baseado em Next.js 
+- Implementação de código frontend baseado em SolidJS
 - Melhoria do sistema de mensagens para serem instâneas e em tempo real
 - Adição de foto para o perfil
 - Adição de álbum de fotos pessoais
 - Grupos de pessoas que possuem os exatos mesmos amigos
+- Melhorar as rotas e parâmestros para algo mais intuitivo 
 
 ### Médio-longo prazo
 
