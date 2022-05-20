@@ -328,7 +328,7 @@ Este projeto ainda está na sua infância, mas entre as melhorias planejadas est
 
 ### Médio-longo prazo
 
-- Refazer o código backend por completo utilizando Rust
+- Refazer o código backend por completo utilizando Golanf
 - Fazer um aplicativo para celular
 
 ### Longo prazo
